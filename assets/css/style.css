@@ -1,0 +1,36 @@
+*{
+     padding: 0;
+     font-family: "poppins";
+    
+}
+@font-face {
+      font-family: "poppins";
+      src: url(../font/Poppins/Poppins-Regular.ttf);
+}
+h1{
+background-color: rosybrown;
+color: white;
+text-shadow: 2 2 20px gray;
+padding: 2rem;
+text-align: center;
+
+}
+h2{
+      color: rosybrown;
+      text-decoration: underline;
+}
+
+#input{
+      display: flex;
+      justify-content: center;
+}
+#btn{
+      font-style: bold;
+      margin-left: 1rem;
+      background-color: bisque;
+      border-radius: 10px;
+      padding: 0 1rem;
+      border: none;
+      
+
+}
