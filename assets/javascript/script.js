@@ -45,41 +45,35 @@ btn.addEventListener("click", function (){
       dellBtn.style.background = "red";
       dellBtn.style.padding = "0 10px";
       dellBtn.style.margin = "0 10px";
-
-      modifBtn.addEventListener("click", function() {
-            todo.appendChild(listItem)
-            modifBtn.textContent
-
-
-      })
-
-      completeBtn.addEventListener("click", function() {
-            todo.appendChild(listItem)
-            completeBtn.style.visibility="hidden"
       
-      })
-
-      dellBtn.addEventListener("click", function (){
-            todo.appendChild(listItem)
-            listItem.remove()
-            
-      })
+      // *******************TACHES EN COURS*****************
+      // bouton modifier************************************
 
       modifBtn.addEventListener("click", function() {
-            finish.appendChild(listItem)
-            modifBtn.style.visibility="hidden"
-
+            todo.appendChild(listItem)
+            const newText =prompt();
+            listItem.textContent=newText
+            listItem.appendChild(modifBtn)
+            listItem.appendChild(completeBtn)
+            listItem.appendChild(dellBtn)
       })
-
+      // bouton Terminée **********************************
       completeBtn.addEventListener("click", function() {
-            finish.appendChild(listItem)
-            completeBtn.textContent="En cours"
            
-      
-      })
+            
+            if (completeBtn.textContent==="Terminée"){
+                  finish.appendChild(listItem)
+                  completeBtn.textContent="En cours"
+                  return
+            }
+            if(completeBtn.textContent=== "En cours"){
+                  todo.appendChild(listItem)
+                  completeBtn.textContent="Terminée"
+            }
 
+      })
+      // bouton supprimer********************************
       dellBtn.addEventListener("click", function (){
-            finish.appendChild(listItem)
             listItem.remove()
             
       })
